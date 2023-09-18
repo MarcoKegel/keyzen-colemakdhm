@@ -1,10 +1,18 @@
+var punish_value=3;
 var data = {};
-data.chars = " ntesiroahdjglpufywqbkvmcxz1234567890'\",.!?:;/@$%&#*()_ABCDEFGHIJKLMNOPQRSTUVWXYZ~+-={}|^<>`[]\\";
+// FullChar 
+// data.chars = " ntesiroahdlp,cuf.xywz/q'mgkvjb1234567890'\",.!?:;/@$%&#*()_ABCDEFGHIJKLMNOPQRSTUVWXYZ~+-={}|^<>`[]\\";
+//data.chars = " ntesiroahdlp,cuf"
+// data.chars = "hdlp,cuf";
+//data.chars = ",cuf";
+data.chars = ",cuf.xywz/q'mgkvjb";
+
 data.consecutive = 10;
-data.word_length = 7;
+data.word_length = 8;
 
 
 $(document).ready(function() {
+    
     if (localStorage.data != undefined) {
         load();
         render();
@@ -43,8 +51,8 @@ function keyHandler(e) {
         (new Audio("click.wav")).play();
     }
     else {
-        data.in_a_row[data.word[data.word_index]] = 0;
-        data.in_a_row[key] = 0;
+        data.in_a_row[data.word[data.word_index]] -=punish_value; // target key
+        data.in_a_row[key] -= punish_value; // key pressed instead of target
         (new Audio("clack.wav")).play();
         data.word_errors[data.word_index] = true;
     }
