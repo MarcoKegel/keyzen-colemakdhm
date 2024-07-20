@@ -1,14 +1,14 @@
 var punish_value=3;
 var data = {};
 // FullChar 
-// data.chars = " ntesiroahdlp,cuf.xywz/q'mgkvjb1234567890'\",.!?:;/@$%&#*()_ABCDEFGHIJKLMNOPQRSTUVWXYZ~+-={}|^<>`[]\\";
-//data.chars = " ntesiroahdlp,cuf"
+data.chars = " ntesiroahdlp,cuf.xywz/'qmgkvjb1234567890'\"!?:;/@$%&#*()_ABCDEFGHIJKLMNOPQRSTUVWXYZ~+-={}|^<>`[]\\";
+// data.chars = " ntesiroahdlp,cuf.xywz/'qmgkvjb"
 // data.chars = "hdlp,cuf";
 //data.chars = ",cuf";
-data.chars = ",cuf.xywz/q'mgkvjb";
+//data.chars = ",cuf.xywz/'qmgkvjb";
 
-data.consecutive = 10;
-data.word_length = 8;
+data.consecutive = 6;
+data.word_length = 10;
 
 
 $(document).ready(function() {
